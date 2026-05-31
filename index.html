@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qsign — eIDAS-Compliant Electronic Signing by QuackStack</title>
+    <meta name="description" content="Qsign is a desktop signing client for physical tokens and smart cards. Compliant with EU Regulation 910/2014 (eIDAS). Works with B-Trust and all eIDAS-compliant certificates. Contact QuackStack for a tailored deal.">
+    <meta name="author" content="QuackStack Ltd.">
+    <meta name="keywords" content="Qsign, e-signature, eIDAS, qualified electronic signature, B-Trust, digital signing, PDF signing, QuackStack">
+    <meta property="og:title" content="Qsign — eIDAS-Compliant Electronic Signing">
+    <meta property="og:description" content="Desktop signing client for physical tokens and smart cards. Works with eIDAS-compliant certificates. Contact QuackStack for your deal.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Ambient background -->
+    <div class="ambient-bg">
+        <div class="ambient-orb ambient-orb-1"></div>
+        <div class="ambient-orb ambient-orb-2"></div>
+        <div class="ambient-orb ambient-orb-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.09 0C11.7 0.42 7.61 2.46 4.64 5.75C1.66 9.03 0.01 13.31 0 17.75C0.01 22.19 1.66 26.47 4.64 29.75C7.61 33.04 11.7 35.08 16.09 35.5V31.23C12.84 30.81 9.86 29.21 7.69 26.73C5.53 24.26 4.33 21.07 4.32 17.78C4.33 14.48 5.53 11.29 7.69 8.82C9.86 6.34 12.84 4.74 16.09 4.32V0ZM20.24 0.06V4.42C23.35 4.99 26.16 6.64 28.18 9.08C30.21 11.52 31.32 14.6 31.33 17.78C31.33 20.96 30.22 24.04 28.19 26.48C26.17 28.92 23.35 30.57 20.24 31.14V35.44C24.48 34.84 28.35 32.71 31.15 29.46C33.96 26.21 35.5 22.05 35.5 17.75C35.5 13.45 33.96 9.29 31.15 6.04C28.35 2.79 24.48 0.66 20.24 0.06Z" fill="url(#qs-logo-grad)"/>
+                    <path d="M17.83 8.13C16.58 8.13 15.34 8.38 14.19 8.86C13.03 9.35 11.98 10.05 11.1 10.94C10.21 11.83 9.51 12.89 9.03 14.06C8.55 15.22 8.31 16.47 8.31 17.73C8.31 20.21 9.27 22.6 10.99 24.39C12.71 26.17 15.05 27.22 17.52 27.3H23.69L26.97 27.28L23.99 25.04C25.04 24.14 25.89 23.02 26.48 21.76C27.06 20.5 27.36 19.12 27.36 17.73C27.36 16.46 27.11 15.21 26.63 14.04C26.15 12.87 25.44 11.81 24.54 10.91L22 13.5C22.56 14.06 23.01 14.72 23.32 15.46C23.63 16.19 23.79 16.98 23.79 17.78C23.79 18.57 23.64 19.36 23.33 20.09C23.03 20.82 22.59 21.49 22.04 22.05C21.48 22.61 20.82 23.05 20.09 23.35C19.36 23.66 18.59 23.81 17.8 23.81C16.21 23.81 14.69 23.18 13.56 22.05C12.44 20.91 11.81 19.38 11.81 17.78C11.81 16.18 12.44 14.65 13.56 13.52C14.69 12.38 16.21 11.75 17.8 11.75C18.57 11.75 19.34 11.91 20.05 12.21L22.72 9.49C21.25 8.6 19.56 8.13 17.83 8.13Z" fill="url(#qs-logo-grad2)"/>
+                    <defs>
+                        <linearGradient id="qs-logo-grad" x1="0" y1="0" x2="35.5" y2="35.5" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#60A5FA"/>
+                            <stop offset="1" stop-color="#818CF8"/>
+                        </linearGradient>
+                        <linearGradient id="qs-logo-grad2" x1="8" y1="8" x2="27" y2="27" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#60A5FA"/>
+                            <stop offset="1" stop-color="#818CF8"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span class="logo-text">Qsign</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#compliance" class="nav-link">Compliance</a>
+                <a href="#screenshots" class="nav-link">Preview</a>
+                <a href="#contact" class="nav-link nav-link-cta">Get In Touch</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge animate-fade-up">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                eIDAS Compliant · EU Regulation 910/2014
+            </div>
+            <h1 class="hero-title animate-fade-up delay-1">
+                Sign documents<br>
+                <span class="gradient-text">with legal certainty.</span>
+            </h1>
+            <p class="hero-subtitle animate-fade-up delay-2">
+                Qsign is a desktop client for your physical signing token. Plug in your USB token or smart card, and Qsign handles the rest — customization, placement, and signing — using your existing eIDAS-compliant certificate.
+            </p>
+            <div class="hero-actions animate-fade-up delay-3">
+                <a href="#contact" class="btn btn-primary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    Contact Us for a Deal
+                </a>
+                <a href="#features" class="btn btn-ghost">
+                    Explore Features
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                </a>
+            </div>
+            <div class="hero-trust animate-fade-up delay-4">
+                <div class="trust-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    <span>Physical Token Client</span>
+                </div>
+                <div class="trust-divider"></div>
+                <div class="trust-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                    <span>B-Trust &amp; eIDAS Compatible</span>
+                </div>
+                <div class="trust-divider"></div>
+                <div class="trust-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+                    <span>Desktop Application</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual animate-fade-up delay-2">
+            <!-- Main document SVG illustration -->
+            <div class="hero-doc-container">
+                <svg class="hero-doc-svg" viewBox="0 0 480 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Document shadow -->
+                    <rect x="50" y="30" width="300" height="310" rx="12" fill="rgba(0,0,0,0.3)" filter="url(#doc-shadow)"/>
+                    <!-- Document body -->
+                    <rect x="40" y="20" width="300" height="310" rx="12" fill="#1e293b" stroke="rgba(96,165,250,0.2)" stroke-width="1"/>
+                    <!-- Header bar -->
+                    <rect x="40" y="20" width="300" height="40" rx="12" fill="rgba(96,165,250,0.08)"/>
+                    <rect x="40" y="48" width="300" height="12" fill="rgba(96,165,250,0.08)"/>
+                    <!-- Title line -->
+                    <rect x="60" y="32" width="120" height="8" rx="4" fill="rgba(96,165,250,0.4)"/>
+                    <!-- Dots -->
+                    <circle cx="310" cy="36" r="4" fill="#ef4444" opacity="0.6"/>
+                    <circle cx="325" cy="36" r="4" fill="#eab308" opacity="0.6"/>
+                    <!-- Text lines -->
+                    <rect x="60" y="80" width="200" height="6" rx="3" fill="rgba(255,255,255,0.1)"/>
+                    <rect x="60" y="96" width="260" height="6" rx="3" fill="rgba(255,255,255,0.06)"/>
+                    <rect x="60" y="112" width="180" height="6" rx="3" fill="rgba(255,255,255,0.06)"/>
+                    <rect x="60" y="128" width="240" height="6" rx="3" fill="rgba(255,255,255,0.06)"/>
+                    <rect x="60" y="152" width="160" height="6" rx="3" fill="rgba(255,255,255,0.1)"/>
+                    <rect x="60" y="168" width="260" height="6" rx="3" fill="rgba(255,255,255,0.06)"/>
+                    <rect x="60" y="184" width="220" height="6" rx="3" fill="rgba(255,255,255,0.06)"/>
+                    <rect x="60" y="200" width="240" height="6" rx="3" fill="rgba(255,255,255,0.06)"/>
+                    <rect x="60" y="216" width="190" height="6" rx="3" fill="rgba(255,255,255,0.06)"/>
+                    <!-- Signature area -->
+                    <rect x="160" y="250" width="160" height="60" rx="8" fill="rgba(96,165,250,0.06)" stroke="rgba(96,165,250,0.25)" stroke-width="1" stroke-dasharray="6 3"/>
+                    <!-- Signature stamp -->
+                    <g class="signature-stamp">
+                        <circle cx="240" cy="280" r="24" fill="rgba(96,165,250,0.12)" stroke="rgba(96,165,250,0.5)" stroke-width="1.5"/>
+                        <circle cx="240" cy="280" r="18" fill="none" stroke="rgba(96,165,250,0.3)" stroke-width="1"/>
+                        <path d="M234 280l4 4 8-8" stroke="#60A5FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <!-- Floating verification badge -->
+                    <g class="float-badge" transform="translate(340, 60)">
+                        <rect x="0" y="0" width="130" height="50" rx="12" fill="rgba(16,185,129,0.1)" stroke="rgba(16,185,129,0.3)" stroke-width="1"/>
+                        <circle cx="24" cy="25" r="12" fill="rgba(16,185,129,0.15)" stroke="#10B981" stroke-width="1.5"/>
+                        <path d="M20 25l3 3 5-5" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <text x="44" y="22" fill="#10B981" font-size="8" font-family="Inter, sans-serif" font-weight="600">VERIFIED</text>
+                        <text x="44" y="34" fill="rgba(16,185,129,0.6)" font-size="7" font-family="Inter, sans-serif">eIDAS Compliant</text>
+                    </g>
+                    <!-- Floating token badge -->
+                    <g class="float-badge-2" transform="translate(350, 160)">
+                        <rect x="0" y="0" width="120" height="50" rx="12" fill="rgba(96,165,250,0.1)" stroke="rgba(96,165,250,0.3)" stroke-width="1"/>
+                        <rect x="12" y="14" width="22" height="22" rx="4" fill="rgba(96,165,250,0.15)" stroke="#60A5FA" stroke-width="1.5"/>
+                        <rect x="18" y="24" width="10" height="7" rx="1.5" fill="none" stroke="#60A5FA" stroke-width="1.2"/>
+                        <path d="M20.5 24v-2.5a2.5 2.5 0 0 1 5 0V24" fill="none" stroke="#60A5FA" stroke-width="1.2" stroke-linecap="round"/>
+                        <text x="42" y="22" fill="#60A5FA" font-size="8" font-family="Inter, sans-serif" font-weight="600">USB TOKEN</text>
+                        <text x="42" y="34" fill="rgba(96,165,250,0.6)" font-size="7" font-family="Inter, sans-serif">Smart Card</text>
+                    </g>
+                    <!-- Floating customization badge -->
+                    <g class="float-badge-3" transform="translate(355, 260)">
+                        <rect x="0" y="0" width="115" height="50" rx="12" fill="rgba(129,140,248,0.1)" stroke="rgba(129,140,248,0.3)" stroke-width="1"/>
+                        <rect x="12" y="14" width="22" height="22" rx="4" fill="rgba(129,140,248,0.15)" stroke="#818CF8" stroke-width="1.5"/>
+                        <path d="M19 30l3-10 7 7-10 3z" fill="none" stroke="#818CF8" stroke-width="1.2" stroke-linejoin="round"/>
+                        <path d="M22 20l4 4" stroke="#818CF8" stroke-width="1.2" stroke-linecap="round"/>
+                        <text x="42" y="22" fill="#818CF8" font-size="8" font-family="Inter, sans-serif" font-weight="600">CUSTOM</text>
+                        <text x="42" y="34" fill="rgba(129,140,248,0.6)" font-size="7" font-family="Inter, sans-serif">Your Design</text>
+                    </g>
+                    <!-- Connection lines -->
+                    <line x1="340" y1="85" x2="360" y2="85" stroke="rgba(16,185,129,0.2)" stroke-width="1" stroke-dasharray="4 3" class="connection-line"/>
+                    <line x1="340" y1="185" x2="362" y2="185" stroke="rgba(96,165,250,0.2)" stroke-width="1" stroke-dasharray="4 3" class="connection-line"/>
+                    <line x1="340" y1="285" x2="367" y2="285" stroke="rgba(129,140,248,0.2)" stroke-width="1" stroke-dasharray="4 3" class="connection-line"/>
+                    <defs>
+                        <filter id="doc-shadow" x="-20" y="-20" width="380" height="390" filterUnits="userSpaceOnUse">
+                            <feGaussianBlur stdDeviation="15" result="shadow"/>
+                            <feColorMatrix in="shadow" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+                        </filter>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Capabilities</span>
+                <h2 class="section-title">Everything you need<br><span class="gradient-text">to sign with confidence</span></h2>
+                <p class="section-desc">Qsign gives you full control over how your existing certificate signs a document — from signature placement to its visual appearance.</p>
+            </div>
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 48 48" fill="none">
+                            <rect x="4" y="4" width="40" height="40" rx="10" fill="rgba(96,165,250,0.08)" stroke="rgba(96,165,250,0.2)" stroke-width="1"/>
+                            <path d="M16 24h16M24 16v16" stroke="#60A5FA" stroke-width="2" stroke-linecap="round"/>
+                            <rect x="18" y="18" width="12" height="12" rx="2" fill="none" stroke="#818CF8" stroke-width="1.5" stroke-dasharray="3 2"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Custom Placement</h3>
+                    <p class="feature-desc">Drag and drop the signature field to any position on any page. Place it exactly where it needs to be — with pixel-level precision.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 48 48" fill="none">
+                            <rect x="4" y="4" width="40" height="40" rx="10" fill="rgba(96,165,250,0.08)" stroke="rgba(96,165,250,0.2)" stroke-width="1"/>
+                            <path d="M14 32V16h6l4 8 4-8h6v16" stroke="#60A5FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14 24h20" stroke="#818CF8" stroke-width="1.5" stroke-dasharray="3 2"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Adjustable Size</h3>
+                    <p class="feature-desc">Resize your signature field freely. Whether you need a compact stamp or a full-width block — Qsign adapts to your document's layout.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 48 48" fill="none">
+                            <rect x="4" y="4" width="40" height="40" rx="10" fill="rgba(96,165,250,0.08)" stroke="rgba(96,165,250,0.2)" stroke-width="1"/>
+                            <rect x="12" y="12" width="24" height="24" rx="4" fill="none" stroke="#60A5FA" stroke-width="2"/>
+                            <circle cx="20" cy="20" r="3" fill="#818CF8" opacity="0.5"/>
+                            <path d="M12 32l8-8 4 4 8-10 4 4" stroke="#60A5FA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Background Image</h3>
+                    <p class="feature-desc">Add a custom background image to your signature — your company logo, a seal, or any branding element that represents you.</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 48 48" fill="none">
+                            <rect x="4" y="4" width="40" height="40" rx="10" fill="rgba(96,165,250,0.08)" stroke="rgba(96,165,250,0.2)" stroke-width="1"/>
+                            <text x="14" y="22" fill="#60A5FA" font-size="11" font-family="Inter, sans-serif" font-weight="700">Aa</text>
+                            <rect x="12" y="28" width="24" height="6" rx="2" fill="none" stroke="#818CF8" stroke-width="1.5"/>
+                            <rect x="14" y="30" width="8" height="2" rx="1" fill="#60A5FA" opacity="0.5"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Custom Text Overlay</h3>
+                    <p class="feature-desc">Add text to your signature with template placeholders — signer name, timestamp, and custom messages. Choose from predefined templates or write your own.</p>
+                </div>
+                <!-- Feature 5 -->
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 48 48" fill="none">
+                            <rect x="4" y="4" width="40" height="40" rx="10" fill="rgba(96,165,250,0.08)" stroke="rgba(96,165,250,0.2)" stroke-width="1"/>
+                            <rect x="13" y="12" width="22" height="28" rx="3" fill="none" stroke="#60A5FA" stroke-width="2"/>
+                            <rect x="17" y="16" width="14" height="3" rx="1.5" fill="#60A5FA" opacity="0.3"/>
+                            <rect x="17" y="22" width="14" height="2" rx="1" fill="rgba(255,255,255,0.1)"/>
+                            <rect x="17" y="27" width="10" height="2" rx="1" fill="rgba(255,255,255,0.1)"/>
+                            <path d="M17 34l4 4 7-7" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">PDF Signing</h3>
+                    <p class="feature-desc">Open any PDF, apply your token's certificate to sign it, and export a signed copy. Built-in PDF viewer with zoom controls for seamless document review.</p>
+                </div>
+                <!-- Feature 6 -->
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 48 48" fill="none">
+                            <rect x="4" y="4" width="40" height="40" rx="10" fill="rgba(96,165,250,0.08)" stroke="rgba(96,165,250,0.2)" stroke-width="1"/>
+                            <path d="M24 14v10l6 4" stroke="#60A5FA" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="24" cy="24" r="12" fill="none" stroke="#818CF8" stroke-width="1.5" stroke-dasharray="3 2"/>
+                            <path d="M24 14a10 10 0 0 1 0 20" stroke="#60A5FA" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Signature Verification</h3>
+                    <p class="feature-desc">Verify any signed document instantly. Check signature validity, signer identity, and the certificate chain — all within the app.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Workflow</span>
+                <h2 class="section-title">Three steps to<br><span class="gradient-text">a signed document</span></h2>
+            </div>
+            <div class="steps-container">
+                <div class="step animate-on-scroll">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <div class="step-icon-wrap">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="6" width="8" height="12" rx="1"/>
+                                <path d="M14 8h6M14 12h6M14 16h4"/>
+                                <path d="M10 12h4"/>
+                            </svg>
+                        </div>
+                        <h3>Plug In Your Token</h3>
+                        <p>Insert your USB token or smart card containing your qualified certificate. Qsign detects it automatically.</p>
+                    </div>
+                    <div class="step-connector">
+                        <svg width="60" height="24" viewBox="0 0 60 24"><path d="M0 12h50m-8-6l8 6-8 6" stroke="rgba(96,165,250,0.3)" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                </div>
+                <div class="step animate-on-scroll">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <div class="step-icon-wrap">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#818CF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                            </svg>
+                        </div>
+                        <h3>Open &amp; Customize</h3>
+                        <p>Load your PDF, place the signature field where you want it, and configure the size, background image, and text overlay.</p>
+                    </div>
+                    <div class="step-connector">
+                        <svg width="60" height="24" viewBox="0 0 60 24"><path d="M0 12h50m-8-6l8 6-8 6" stroke="rgba(129,140,248,0.3)" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                </div>
+                <div class="step animate-on-scroll">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <div class="step-icon-wrap">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <path d="m9 12 2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <h3>Sign &amp; Export</h3>
+                        <p>Enter your token PIN and sign. Qsign applies your certificate to the document, producing a legally binding, eIDAS-compliant signed PDF.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliance Section -->
+    <section class="compliance" id="compliance">
+        <div class="container">
+            <div class="compliance-grid">
+                <div class="compliance-content animate-on-scroll">
+                    <span class="section-tag">Legal Framework</span>
+                    <h2 class="section-title">Built on the<br><span class="gradient-text">eIDAS standard</span></h2>
+                    <p class="compliance-text">
+                        Qsign works with certificates that conform to <strong>EU Regulation No 910/2014 (eIDAS)</strong> — the European standard for electronic identification and trust services.
+                        Your certificate lives on your physical token; Qsign is the client that applies it to documents.
+                    </p>
+                    <p class="compliance-text">
+                        Under eIDAS, a <strong>Qualified Electronic Signature (QES)</strong> has <strong>the same legal effect as a handwritten signature</strong>.
+                        It is automatically recognized and legally binding across all <strong>27 EU member states</strong>, as well as the EEA countries (Norway, Iceland, Liechtenstein).
+                    </p>
+                    <p class="compliance-text">
+                        Qsign is fully compatible with <strong>B-Trust</strong> — Bulgaria's leading Qualified Trust Service Provider operated by BORICA AD — and works with
+                        <strong>any eIDAS-compliant certificate on a physical token or smart card</strong> across the EU.
+                    </p>
+                    <div class="compliance-badges">
+                        <div class="compliance-badge">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                            <div>
+                                <strong>eIDAS Regulation</strong>
+                                <span>EU 910/2014</span>
+                            </div>
+                        </div>
+                        <div class="compliance-badge">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                            <div>
+                                <strong>27+ Countries</strong>
+                                <span>EU & EEA Wide</span>
+                            </div>
+                        </div>
+                        <div class="compliance-badge">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#818CF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
+                            <div>
+                                <strong>Legal Equivalence</strong>
+                                <span>= Handwritten</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="compliance-visual animate-on-scroll">
+                    <svg class="compliance-svg" viewBox="0 0 400 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Orbital rings -->
+                        <circle cx="200" cy="170" r="140" fill="none" stroke="rgba(96,165,250,0.08)" stroke-width="1"/>
+                        <circle cx="200" cy="170" r="110" fill="none" stroke="rgba(96,165,250,0.05)" stroke-width="1"/>
+                        <circle cx="200" cy="170" r="80" fill="none" stroke="rgba(96,165,250,0.03)" stroke-width="1"/>
+                        <!-- EU Stars -->
+                        <g class="eu-stars">
+                            <g transform="translate(200,30)"><polygon points="0,-8 2.5,-3 8,-3 3.5,1 5,7 0,3.5 -5,7 -3.5,1 -8,-3 -2.5,-3" fill="#60A5FA" opacity="0.6"/></g>
+                            <g transform="translate(270,48)"><polygon points="0,-8 2.5,-3 8,-3 3.5,1 5,7 0,3.5 -5,7 -3.5,1 -8,-3 -2.5,-3" fill="#60A5FA" opacity="0.6"/></g>
+                            <g transform="translate(320,100)"><polygon points="0,-8 2.5,-3 8,-3 3.5,1 5,7 0,3.5 -5,7 -3.5,1 -8,-3 -2.5,-3" fill="#60A5FA" opacity="0.6"/></g>
+                            <g transform="translate(340,170)"><polygon points="0,-8 2.5,-3 8,-3 3.5,1 5,7 0,3.5 -5,7 -3.5,1 -8,-3 -2.5,-3" fill="#60A5FA" opacity="0.6"/></g>
+                            <g transform="translate(320,240)"><polygon points="0,-8 2.5,-3 8,-3 3.5,1 5,7 0,3.5 -5,7 -3.5,1 -8,-3 -2.5,-3" fill="#60A5FA" opacity="0.6"/></g>
+                            <g transform="translate(270,292)"><polygon points="0,-8 2.5,-3 8,-3 3.5,1 5,7 0,3.5 -5,7 -3.5,1 -8,-3 -2.5,-3" fill="#60A5FA" opacity="0.6"/></g>
+                            <g transform="translate(200,310)"><polygon points="0,-8 2.5,-3 8,-3 3.5,1 5,7 0,3.5 -5,7 -3.5,1 -8,-3 -2.5,-3" fill="#60A5FA" opacity="0.6"/></g>
+                            <g transform="translate(130,292)"><polygon points="0,-8 2.5,-3 8,-3 3.5,1 5,7 0,3.5 -5,7 -3.5,1 -8,-3 -2.5,-3" fill="#60A5FA" opacity="0.6"/></g>
+                            <g transform="translate(80,240)"><polygon points="0,-8 2.5,-3 8,-3 3.5,1 5,7 0,3.5 -5,7 -3.5,1 -8,-3 -2.5,-3" fill="#60A5FA" opacity="0.6"/></g>
+                            <g transform="translate(60,170)"><polygon points="0,-8 2.5,-3 8,-3 3.5,1 5,7 0,3.5 -5,7 -3.5,1 -8,-3 -2.5,-3" fill="#60A5FA" opacity="0.6"/></g>
+                            <g transform="translate(80,100)"><polygon points="0,-8 2.5,-3 8,-3 3.5,1 5,7 0,3.5 -5,7 -3.5,1 -8,-3 -2.5,-3" fill="#60A5FA" opacity="0.6"/></g>
+                            <g transform="translate(130,48)"><polygon points="0,-8 2.5,-3 8,-3 3.5,1 5,7 0,3.5 -5,7 -3.5,1 -8,-3 -2.5,-3" fill="#60A5FA" opacity="0.6"/></g>
+                        </g>
+                        <!-- Shield shape (proper shield: flat top, curved sides, pointed bottom) -->
+                        <g transform="translate(200,165)">
+                            <!-- Shield glow -->
+                            <path d="M0-70 L55-55 C60-50 65-20 60 10 C52 45 25 70 0 85 C-25 70 -52 45 -60 10 C-65-20 -60-50 -55-55 Z"
+                                  fill="rgba(96,165,250,0.04)" filter="url(#shield-glow)"/>
+                            <!-- Shield body -->
+                            <path d="M0-70 L55-55 C60-50 65-20 60 10 C52 45 25 70 0 85 C-25 70 -52 45 -60 10 C-65-20 -60-50 -55-55 Z"
+                                  fill="rgba(15,23,42,0.9)" stroke="rgba(96,165,250,0.35)" stroke-width="2"/>
+                            <!-- Inner shield highlight -->
+                            <path d="M0-55 L42-43 C46-38 50-15 46 8 C40 35 20 55 0 67 C-20 55 -40 35 -46 8 C-50-15 -46-38 -42-43 Z"
+                                  fill="none" stroke="rgba(96,165,250,0.12)" stroke-width="1"/>
+                            <!-- Checkmark -->
+                            <path d="M-16 5 L-5 16 L20-10" stroke="#60A5FA" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        </g>
+                        <!-- Orbiting dots -->
+                        <circle class="orbit-dot" cx="200" cy="30" r="4" fill="#60A5FA" opacity="0.8"/>
+                        <circle class="orbit-dot-2" cx="340" cy="170" r="3" fill="#818CF8" opacity="0.6"/>
+                        <defs>
+                            <filter id="shield-glow" x="-100" y="-100" width="300" height="300" filterUnits="userSpaceOnUse">
+                                <feGaussianBlur stdDeviation="8" result="glow"/>
+                                <feColorMatrix in="glow" type="matrix" values="0 0 0 0 0.376 0 0 0 0 0.647 0 0 0 0 0.98 0 0 0 0.3 0"/>
+                                <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                        </defs>
+                    </svg>
+                    <!-- Space for second image -->
+                    <div class="compliance-image-slot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="screenshots" id="screenshots">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Preview</span>
+                <h2 class="section-title">See Qsign<br><span class="gradient-text">in action</span></h2>
+                <p class="section-desc">A professional desktop application designed for clarity and efficiency.</p>
+            </div>
+            <div class="screenshots-carousel">
+                <div class="screenshot-card animate-on-scroll">
+                    <div class="screenshot-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
+                        Signature Appearance
+                    </div>
+                    <img src="image.png" alt="Qsign Studio — Appearance settings showing text templates, signer information, and signature preview" loading="lazy">
+                </div>
+                <div class="screenshot-card animate-on-scroll">
+                    <div class="screenshot-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                        Signature Placement
+                    </div>
+                    <img src="image copy.png" alt="Qsign Studio — Drag and drop signature placement on the document" loading="lazy">
+                </div>
+                <div class="screenshot-card animate-on-scroll">
+                    <div class="screenshot-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+                        Field Configuration
+                    </div>
+                    <img src="image copy 2.png" alt="Qsign Studio — Field placement and background image settings" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <div class="cta-card animate-on-scroll">
+                <div class="cta-bg-decor">
+                    <svg viewBox="0 0 600 300" fill="none" class="cta-bg-svg">
+                        <circle cx="100" cy="250" r="200" fill="rgba(96,165,250,0.03)"/>
+                        <circle cx="500" cy="50" r="180" fill="rgba(129,140,248,0.03)"/>
+                    </svg>
+                </div>
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to sign<br><span class="gradient-text">with confidence?</span></h2>
+                    <p class="cta-desc">Qsign is available exclusively through QuackStack. Get in touch to discuss a tailored solution for your organization.</p>
+                    <div class="contact-methods">
+                        <a href="mailto:contact@quackstack.net" class="contact-card" id="contact-email">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            </div>
+                            <div class="contact-info">
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">contact@quackstack.net</span>
+                            </div>
+                        </a>
+                        <a href="tel:+359893058517" class="contact-card" id="contact-phone">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </div>
+                            <div class="contact-info">
+                                <span class="contact-label">Phone</span>
+                                <span class="contact-value">+359 893 058 517</span>
+                            </div>
+                        </a>
+                        <a href="https://quackstack.net" target="_blank" rel="noopener noreferrer" class="contact-card" id="contact-website">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                            </div>
+                            <div class="contact-info">
+                                <span class="contact-label">Who Are We</span>
+                                <span class="contact-value">quackstack.net</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg width="28" height="28" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.09 0C11.7 0.42 7.61 2.46 4.64 5.75C1.66 9.03 0.01 13.31 0 17.75C0.01 22.19 1.66 26.47 4.64 29.75C7.61 33.04 11.7 35.08 16.09 35.5V31.23C12.84 30.81 9.86 29.21 7.69 26.73C5.53 24.26 4.33 21.07 4.32 17.78C4.33 14.48 5.53 11.29 7.69 8.82C9.86 6.34 12.84 4.74 16.09 4.32V0ZM20.24 0.06V4.42C23.35 4.99 26.16 6.64 28.18 9.08C30.21 11.52 31.32 14.6 31.33 17.78C31.33 20.96 30.22 24.04 28.19 26.48C26.17 28.92 23.35 30.57 20.24 31.14V35.44C24.48 34.84 28.35 32.71 31.15 29.46C33.96 26.21 35.5 22.05 35.5 17.75C35.5 13.45 33.96 9.29 31.15 6.04C28.35 2.79 24.48 0.66 20.24 0.06Z" fill="url(#qs-foot-grad)"/>
+                            <path d="M17.83 8.13C16.58 8.13 15.34 8.38 14.19 8.86C13.03 9.35 11.98 10.05 11.1 10.94C10.21 11.83 9.51 12.89 9.03 14.06C8.55 15.22 8.31 16.47 8.31 17.73C8.31 20.21 9.27 22.6 10.99 24.39C12.71 26.17 15.05 27.22 17.52 27.3H23.69L26.97 27.28L23.99 25.04C25.04 24.14 25.89 23.02 26.48 21.76C27.06 20.5 27.36 19.12 27.36 17.73C27.36 16.46 27.11 15.21 26.63 14.04C26.15 12.87 25.44 11.81 24.54 10.91L22 13.5C22.56 14.06 23.01 14.72 23.32 15.46C23.63 16.19 23.79 16.98 23.79 17.78C23.79 18.57 23.64 19.36 23.33 20.09C23.03 20.82 22.59 21.49 22.04 22.05C21.48 22.61 20.82 23.05 20.09 23.35C19.36 23.66 18.59 23.81 17.8 23.81C16.21 23.81 14.69 23.18 13.56 22.05C12.44 20.91 11.81 19.38 11.81 17.78C11.81 16.18 12.44 14.65 13.56 13.52C14.69 12.38 16.21 11.75 17.8 11.75C18.57 11.75 19.34 11.91 20.05 12.21L22.72 9.49C21.25 8.6 19.56 8.13 17.83 8.13Z" fill="url(#qs-foot-grad2)"/>
+                            <defs>
+                                <linearGradient id="qs-foot-grad" x1="0" y1="0" x2="35.5" y2="35.5" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#60A5FA"/>
+                                    <stop offset="1" stop-color="#818CF8"/>
+                                </linearGradient>
+                                <linearGradient id="qs-foot-grad2" x1="8" y1="8" x2="27" y2="27" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#60A5FA"/>
+                                    <stop offset="1" stop-color="#818CF8"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span>Qsign</span>
+                    </div>
+                    <p class="footer-tagline">Professional e-signing software by QuackStack Ltd.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#features">Features</a>
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="#compliance">Compliance</a>
+                    <a href="#screenshots">Preview</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 QuackStack Ltd. All rights reserved.</p>
+                <p class="footer-legal">Qsign is a signing client for eIDAS-compliant tokens. Certificates are issued by Qualified Trust Service Providers.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
